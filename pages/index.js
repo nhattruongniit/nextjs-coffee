@@ -1,11 +1,19 @@
-import styles from '../styles/Home.module.css'
+// components
+import Banner from '../components/banner';
 
 export default function Home() {
+
+  function handleOnClick() {
+    console.log('handleOnClick')
+  }
+
   return (
     <>
-      <h1 className={styles.title}>
-        Coffee Application
-      </h1>
+      <Banner 
+        buttonText="View stores nearby" 
+        handleOnClick={handleOnClick}
+      />
+
     </>
   )
 }
