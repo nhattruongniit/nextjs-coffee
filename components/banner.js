@@ -10,7 +10,9 @@ function banner({ buttonText, handleOnClick }) {
         <span className={styles.title2}>Connoisseur</span>
       </h1>
       <p className={styles.subTitle}>Discover your local coffee shops!</p>
-      <button type="button"  className={styles.button} onClick={handleOnClick}>{buttonText}</button>
+      <div className={styles.buttonWrapper}>
+        <button type="button"  className={styles.button} onClick={handleOnClick}>{buttonText}</button>
+      </div>
     </div>
   )
 }
