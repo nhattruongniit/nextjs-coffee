@@ -7,6 +7,9 @@ import Card from "../components/card";
 // styles
 import styles from "../styles/Home.module.css";
 
+// data
+import coffeeStores from '../data/coffee-stores.json';
+
 export default function Home() {
   function handleOnClick() {
     console.log("handleOnClick");
@@ -25,11 +28,19 @@ export default function Home() {
         />
       </div>
 
-      <Card
-        name="Darkhouse Coffee"
-        imgUrl="/static/hero-image.png"
-        href="/coffee-store/darkhorse-coffee"
-      />
+      <div className={styles.cardLayout}>
+        {coffeeStores.map(coffee => (
+          <Card
+            key={coffee.id}
+            name={coffee.name}
+            imgUrl={coffee.imgUrl}
+            href={`/coffee-store/${coffee.id}`}
+          />
+        ))}
+        
+      </div>
+
+     
     </>
   );
 }
