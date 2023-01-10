@@ -10,7 +10,17 @@ import styles from "../styles/Home.module.css";
 // data
 import coffeeStores from '../data/coffee-stores.json';
 
-export default function Home() {
+export async function getStaticProps(context) {
+  // const data = fetch(coffeeStores)
+  return {
+    props: {
+      coffeeStores
+    }
+  }
+}
+
+export default function Home({coffeeStores}) {
+  console.log({coffeeStores})
   function handleOnClick() {
     console.log("handleOnClick");
   }
