@@ -38,6 +38,8 @@ export default function Home({coffeeStores}) {
         />
       </div>
 
+      <h2 className={styles.heading2}>Toronto Store</h2>
+
       <div className={styles.cardLayout}>
         {coffeeStores.map(coffee => (
           <Card
